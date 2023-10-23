@@ -76,4 +76,4 @@ RUN chgrp -R 0 /tmp &&   chmod -R g=u /tmp
 USER jetty
 
 ENTRYPOINT ["/entrypoint.sh"]
-VOLUME ["/tmp/jetty"]
+#VOLUME ["/tmp/jetty"]
