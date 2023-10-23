@@ -76,4 +76,5 @@ RUN chgrp -R 0 /tmp &&   chmod -R g=u /tmp
 USER jetty
 
 ENTRYPOINT ["/entrypoint.sh"]
+EXPOSE 8080
 #VOLUME ["/tmp/jetty"]
