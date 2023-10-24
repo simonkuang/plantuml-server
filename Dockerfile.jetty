@@ -32,6 +32,7 @@ RUN curl -sSLo /usr/share/fonts/MiSans-Normal.ttf "https://github.com/boyan01/mi
 ARG GRAPHVIZ_VERSION
 ARG GRAPHVIZ_BUILD_DIR=/tmp/graphiz-build
 ARG JAVA_FONTS="MiSans Normal"
+ENV JAVA_FONTS="${JAVA_FONTS}"
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         build-essential \
