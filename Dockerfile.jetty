@@ -25,10 +25,13 @@ RUN apt-get update && \
         && \
     rm -rf /var/lib/apt/lists/* && \
     /generate-jetty-start.sh
+RUN curl -sSLo /usr/share/fonts/MiSans-Normal.ttf "https://github.com/boyan01/mi_sans_font/raw/main/lib/fonts/MiSans-Normal.ttf" && \
+    fc-cache -fv
 
 # Build Graphviz from source because there are no binary distributions for recent versions
 ARG GRAPHVIZ_VERSION
 ARG GRAPHVIZ_BUILD_DIR=/tmp/graphiz-build
+ARG JAVA_FONTS="MiSans Normal"
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         build-essential \
